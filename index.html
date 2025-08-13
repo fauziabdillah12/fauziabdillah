@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | [Nama Kamu]</title>
+    <meta name="description" content="Portofolio kreator konten dan digital marketer dengan pengalaman di TikTok, YouTube, Meta Ads, dan Shopee Ads">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Portofolio+[Nama+Kamu]">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💼</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a',
+                        accent: '#f97316',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .portfolio-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+        }
+        
+        .btn {
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Mobile menu animation */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="font-poppins">
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-primary">[Nama Kamu]</div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-primary hover:text-accent transition">Home</a>
+                <a href="#about" class="text-primary hover:text-accent transition">Tentang</a>
+                <a href="#skills" class="text-primary hover:text-accent transition">Keahlian</a>
+                <a href="#experience" class="text-primary hover:text-accent transition">Pengalaman</a>
+                <a href="#portfolio" class="text-primary hover:text-accent transition">Portofolio</a>
+                <a href="#contact" class="text-primary hover:text-accent transition">Kontak</a>
+                <a href="#" class="bg-accent text-white px-4 py-2 rounded-lg btn">Download CV</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-primary">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-white">
+            <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+                <a href="#home" class="text-primary hover:text-accent transition py-2">Home</a>
+                <a href="#about" class="text-primary hover:text-accent transition py-2">Tentang</a>
+                <a href="#skills" class="text-primary hover:text-accent transition py-2">Keahlian</a>
+                <a href="#experience" class="text-primary hover:text-accent transition py-2">Pengalaman</a>
+                <a href="#portfolio" class="text-primary hover:text-accent transition py-2">Portofolio</a>
+                <a href="#contact" class="text-primary hover:text-accent transition py-2">Kontak</a>
+                <a href="#" class="bg-accent text-white px-4 py-2 rounded-lg text-center btn">Download CV</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="container mx-auto px-4 py-12 md:py-24">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 flex justify-center" data-aos="fade-right">
+                    <div class="bg-gray-200 border-2 border-dashed rounded-full w-64 h-64 md:w-80 md:h-80 overflow-hidden flex items-center justify-center">
+                        <i data-lucide="user" class="w-32 h-32 text-gray-400"></i>
+                    </div>
+                </div>
+                <div class="md:w-1/2 text-center md:text-left" data-aos="fade-left">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-4">[Nama Kamu]</h1>
+                    <p class="text-xl text-gray-600 mb-8">Kreator Konten & Digital Marketer – Mengubah Ide Menjadi Konten yang Menarik</p>
+                    <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#portfolio" class="bg-accent text-white px-6 py-3 rounded-lg font-medium btn">Lihat Portofolio</a>
+                        <a href="#contact" class="bg-white text-primary border border-primary px-6 py-3 rounded-lg font-medium btn">Hubungi Saya</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Saya Section -->
+    <section id="about" class="bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Tentang Saya</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center" data-aos="fade-right">
+                    <div class="bg-gray-200 border-2 border-dashed rounded-xl w-64 h-64 flex items-center justify-center">
+                        <i data-lucide="smile" class="w-24 h-24 text-gray-400"></i>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12" data-aos="fade-left">
+                    <p class="text-lg text-gray-600 mb-6">
+                        <span class="font-semibold text-primary">Usia 22 tahun</span> - Saya adalah kreator konten dengan keahlian public speaking, editing, coding, dan digital marketing. Berpengalaman membuat konten promosi dan mengelola kampanye iklan di berbagai platform seperti TikTok, YouTube, Meta Ads, dan Shopee Ads.
+                    </p>
+                    <p class="text-lg text-gray-600">
+                        Saya memiliki passion untuk menciptakan konten yang tidak hanya menarik tetapi juga efektif dalam mencapai tujuan bisnis. Dengan kombinasi keterampilan teknis dan kreativitas, saya mampu menghasilkan konten yang berdampak dan meningkatkan engagement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keahlian Section -->
+    <section id="skills" class="bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Keahlian</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skill 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md skill-card" data-aos="fade-up">
+                    <div class="text-accent mb-4">
+                        <i data-lucide="mic" class="w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-2">Public Speaking</h3>
+                    <p class="text-gray-600">Mampu menyampaikan ide dengan jelas dan persuasif dalam berbagai konteks, baik presentasi formal maupun konten video.</p>
+                </div>
+                
+                <!-- Skill 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md skill-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-accent mb-4">
+                        <i data-lucide="video" class="w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-2">Content Creation & Editing</h3>
+                    <p class="text-gray-600">Membuat konten menarik dari konsep hingga eksekusi, dengan kemampuan editing video dan grafis profesional.</p>
+                </div>
+                
+                <!-- Skill 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md skill-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-accent mb-4">
+                        <i data-lucide="bar-chart-3" class="w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-2">Digital Marketing</h3>
+                    <p class="text-gray-600">Mengelola kampanye iklan efektif di berbagai platform digital dengan analisis data untuk optimasi performa.</p>
+                </div>
+                
+                <!-- Skill 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-md skill-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-accent mb-4">
+                        <i data-lucide="code" class="w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-2">Coding</h3>
+                    <p class="text-gray-600">Mengembangkan solusi teknis untuk kebutuhan digital dengan kemampuan HTML, CSS, JavaScript, dan Python.</p>
+                </div>
+                
+                <!-- Skill 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-md skill-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-accent mb-4">
+                        <i data-lucide="lightbulb" class="w-12 h-12"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-2">Kreativitas</h3>
+                    <p class="text-gray-600">Menghasilkan ide-ide segar dan inovatif untuk konten yang menonjol dan mudah diingat oleh audiens.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pengalaman Section -->
+    <section id="experience" class="bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Pengalaman</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto" data-aos="fade-up">
+                <div class="border-l-4 border-accent pl-8 pb-8 relative">
+                    <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-accent"></div>
+                    <div class="mb-4">
+                        <h3 class="text-xl font-bold text-primary">Kreator Konten – Freelance</h3>
+                        <p class="text-accent font-medium">2022–Sekarang</p>
+                    </div>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                        <li>Membuat konten promosi produk aki mobil dan kolang-kaling di TikTok yang menghasilkan peningkatan penjualan hingga 30%</li>
+                        <li>Mengelola channel YouTube pemrograman dengan lebih dari 10.000 subscriber dan rata-rata 50.000 views per video</li>
+                        <li>Membuat dan menjalankan kampanye iklan di Meta Ads, TikTok Ads, dan Shopee untuk berbagai klien UMKM</li>
+                        <li>Menghasilkan konten kreatif konsisten di media sosial dengan engagement rate rata-rata 8%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portofolio Section -->
+    <section id="portfolio" class="bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Portofolio</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <a href="https://tiktok.com" target="_blank" class="portfolio-item block" data-aos="fade-up">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md">
+                        <div class="bg-gray-200 border-2 border-dashed w-full h-48 flex items-center justify-center">
+                            <i data-lucide="play-circle" class="w-16 h-16 text-gray-400"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-2">Konten Promosi Aki Mobil</h3>
+                            <p class="text-gray-600 mb-4">Video edukatif yang meningkatkan brand awareness dan penjualan</p>
+                            <div class="flex items-center text-accent">
+                                <i data-lucide="external-link" class="w-4 h-4 mr-2"></i>
+                                <span>TikTok</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Portfolio Item 2 -->
+                <a href="https://youtube.com" target="_blank" class="portfolio-item block" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md">
+                        <div class="bg-gray-200 border-2 border-dashed w-full h-48 flex items-center justify-center">
+                            <i data-lucide="play-circle" class="w-16 h-16 text-gray-400"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-2">Tutorial Pemrograman Web</h3>
+                            <p class="text-gray-600 mb-4">Seri tutorial HTML, CSS, dan JavaScript untuk pemula</p>
+                            <div class="flex items-center text-accent">
+                                <i data-lucide="external-link" class="w-4 h-4 mr-2"></i>
+                                <span>YouTube</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Portfolio Item 3 -->
+                <a href="https://instagram.com" target="_blank" class="portfolio-item block" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md">
+                        <div class="bg-gray-200 border-2 border-dashed w-full h-48 flex items-center justify-center">
+                            <i data-lucide="play-circle" class="w-16 h-16 text-gray-400"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-2">Kampanye Produk Kolang-kaling</h3>
+                            <p class="text-gray-600 mb-4">Konten kreatif untuk produk makanan tradisional</p>
+                            <div class="flex items-center text-accent">
+                                <i data-lucide="external-link" class="w-4 h-4 mr-2"></i>
+                                <span>Instagram</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="contact" class="bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Kontak</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <h3 class="text-xl font-semibold text-primary mb-6">Informasi Kontak</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-accent mr-4">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-primary">Email</h4>
+                                <p class="text-gray-600">email@domain.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-accent mr-4">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-primary">WhatsApp</h4>
+                                <a href="https://wa.me/6281234567890" class="text-gray-600 hover:text-accent transition">+62 812 3456 7890</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-accent mr-4">
+                                <i data-lucide="share-2" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-primary mb-3">Media Sosial</h4>
+                                <div class="flex space-x-4">
+                                    <a href="https://tiktok.com" class="social-icon">
+                                        <i data-lucide="music" class="w-6 h-6 text-gray-600 hover:text-accent transition"></i>
+                                    </a>
+                                    <a href="https://youtube.com" class="social-icon">
+                                        <i data-lucide="youtube" class="w-6 h-6 text-gray-600 hover:text-accent transition"></i>
+                                    </a>
+                                    <a href="https://instagram.com" class="social-icon">
+                                        <i data-lucide="instagram" class="w-6 h-6 text-gray-600 hover:text-accent transition"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <h3 class="text-xl font-semibold text-primary mb-6">Kirim Pesan</h3>
+                    
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-1">Nama</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-1">Pesan</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-accent text-white px-6 py-3 rounded-lg font-medium btn">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-center md:text-left">© 2025 [Nama Kamu]. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://tiktok.com" class="social-icon">
+                        <i data-lucide="music" class="w-5 h-5 text-white hover:text-accent transition"></i>
+                    </a>
+                    <a href="https://youtube.com" class="social-icon">
+                        <i data-lucide="youtube" class="w-5 h-5 text-white hover:text-accent transition"></i>
+                    </a>
+                    <a href="https://instagram.com" class="social-icon">
+                        <i data-lucide="instagram" class="w-5 h-5 text-white hover:text-accent transition"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+        
+        // Initialize Lucide Icons
+        lucide.createIcons();
+        
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            const icon = mobileMenuButton.querySelector('i');
+            if (mobileMenu.classList.contains('active')) {
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        });
+        
+        // Close mobile menu when clicking a link
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                const icon = mobileMenuButton.querySelector('i');
+                icon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+        
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
